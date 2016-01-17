@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="countdown.js"></script>
+  </head>
+
+  <body>
+    <h1>Countdown</h1>
+    <p>Demo of Javascript countdown function.</p>
+
+    <div>
+      <h2>Christmas: 25<sup>th</sup> December 2016</h2>
+      <p id="xmas"></p>
+    </div>
+    <div>
+      <h2>Virgin Media Business nightmare ends: 17<sup>th</sup> July 2017</h2>
+      <p id="virgin"></p>
+    </div>
+
+    <script type="text/javascript">
+      attachCountdown("xmas", 2016,11,25,0,0,0, 2016,11,26,0,0,0);
+      attachCountdown("virgin", 2017,6,17,0,0,0, 2017,6,17,0,0,0);
+    </script>
+
+  </body>
+
+
+
+</html>
