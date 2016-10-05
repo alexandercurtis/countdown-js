@@ -3,31 +3,40 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Countdown</title>
+    <title>Countdown Demo</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="cron.js"></script>
     <script type="text/javascript" src="countdown.js"></script>
+    <style> body { font-family: sans-serif; font-size: 16px; } </style>
   </head>
 
   <body>
-    <h1>Countdown</h1>
-    <p>Demo of Javascript countdown function.</p>
+    <h1>Countdown Demo</h1>
 
     <div>
-      <h2>Christmas: 25<sup>th</sup> December 2016</h2>
+      <h2>Start the Weekend</h2>
+      <p id="weekend"></p>
+      <script>
+        attachCountdownCron("weekend", "30 17 * * 5 *", 60*(48+7));
+      </script>
+    </div>
+
+    <div>
+      <h2>Christmas</h2>
       <p id="xmas"></p>
-    </div>
-    <div>
-      <h2>Virgin Media Business nightmare ends: 17<sup>th</sup> July 2017</h2>
-      <p id="virgin"></p>
+      <script>
+        attachCountdownCron("xmas", "* * 25 12 * *", 24*60);
+      </script>
     </div>
 
-    <script type="text/javascript">
-      attachCountdown("xmas", 2016,11,25,0,0,0, 2016,11,26,0,0,0);
-      attachCountdown("virgin", 2017,6,17,0,0,0, 2017,6,17,0,0,0);
-    </script>
+    <div>
+      <h2>My Virgin Media Business nightmare ends: 31<sup>st</sup> July 2017</h2>
+      <p id="virgin"></p>
+      <script>
+        attachCountdownCron("virgin", "0 0 31 7 * 2017", 24*60);
+      </script>
+    </div>
 
   </body>
-
-
 
 </html>
